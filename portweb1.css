@@ -1,0 +1,768 @@
+*{
+    box-sizing: border-box;
+    padding: 0;margin: 0;
+    text-decoration: none;
+    outline: none;scroll-behavior: smooth;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+html{
+    font-size: 62.5;
+    overflow-x: hidden;
+}
+body{
+    background-image: linear-gradient(90deg, rgb(7, 8, 1),rgb(55, 65, 57), rgb(15, 58, 31));
+    color: #4e4444;
+    color: rgb(157, 227, 245);
+}
+.header{
+    background-image: linear-gradient(to bottom right, gray, yellowgreen,rgb(29, 28, 28),rgb(2, 70, 2));
+    max-width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0px 25px; */
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 2rem 9%; */
+    /* background: transparent; */
+    z-index: 100;
+    transition: 3s;
+}
+.header.sticky{
+    background-image: linear-gradient(to top right, gray, yellowgreen,rgb(29, 28, 28),rgb(2, 70, 2));
+}
+.topmenu{
+    display: flex;
+    /* justify-content: end; */
+    align-items: center;
+}
+.mylogo{
+    display: flex;
+    align-items: center;
+}
+.mylogo img{
+    background-color: yellow;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+.topright a{
+    font-size: 16px;
+    color: rgb(197, 238, 203);
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+.topright a:hover,
+.topright a.active{
+    color: rgb(241, 241, 8);
+    text-shadow: #0c2e46;
+}
+.mobilemenuicon{
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+.identity{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.identity h2{
+    width: 10px;
+    height: 60px;
+    font-size: 12px;
+    color: rgb(127, 168, 168);
+    transition: 3ms;
+}
+.identity h2:hover{
+    color: aliceblue;
+}
+.identity img{
+    height: 37px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(68, 211, 211);
+    border-radius: 50px;
+    margin-left: 8px;
+}
+/* #####################The Main Home Section############################### */
+section{
+    min-height: 100vh;
+    padding: 5rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    /* background: url(images/PASSPORT\ PHOTOGRAPH.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+.home-content{
+    max-width: 40rem;
+    /* z-index: 99; */
+    
+}
+.home-content h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2;
+    color: rgb(124, 247, 247);
+    text-shadow: white;
+}
+/* .text-animate{
+    position: relative;
+    width: 20rem;
+} */
+.text-animate h3{
+    width: 340px;
+    opacity: .6;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: transparent;
+    -webkit-text-stroke: 1.3px rgb(153, 240, 211);
+    /* text-shadow: white grey; */
+    line-height: 1.5;
+}
+.home-content p{
+    color: wheat;
+    font-size: 17px;
+    margin: 10px 0 2rem;
+}
+.mainimage img{
+    width: 350px;
+    height: 350px;
+    mix-blend-mode:darken;
+    border-radius: 50%;
+}
+.mainimage::before{
+    content: '';
+    position: absolute;
+    top: 11%;
+    /* bottom: 20%; */
+    left: 51%;
+    /* right: 50%; */
+    width: 0;
+    height: 100%;
+    background:url(images/Southy.jpg);
+    border-radius: 50%;
+    transition: 2s;
+}
+.mainimage:hover::before{
+    width: 48%;
+    /* background: cover center no-repeat; */
+}
+.btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34rem;
+    height: 5rem;
+}
+.btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 4rem;
+    background: rgb(108, 114, 111);
+    border: 2px solid;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: .09rem;
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn:nth-child(2) {
+    background: transparent;
+    color: rgb(114, 161, 202);
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(163, 233, 23);
+    z-index: -1;
+    transition: .5s;
+}
+.btn:hover::before{
+    width: 100%; 
+}
+.home-reach{
+    position: absolute;
+    bottom: 4rem;
+    width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.home-reach a{
+    position: relative;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border:1px solid rgb(137, 151, 214);
+    border-radius: 50%;
+    /* font-size: 20px; */
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-reach a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    width: 0;
+    height: 100%;
+    background-color: rgb(50, 195, 205);
+    z-index: -1;
+    transition: .5s;
+}
+.home-reach a:hover::before{
+    width: 100%;
+}
+/* ########################The ABOUT SECTION Design################# */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-image: linear-gradient(90deg, rgb(7, 8, 1),rgb(55, 65, 57), rgb(15, 58, 31));
+    padding-bottom: 6rem;
+    color: whitesmoke;
+}
+span{
+    color: yellowgreen;
+}
+.heading{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.about-img{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img img{
+    width: 93%;
+    border-radius: 50%;
+    border: 5px solid rgb(152, 224, 6);
+}
+.circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 4px solid yellowgreen;
+    border-bottom: 4px solid yellowgreen;
+    border-left: 4px solid darkgreen;
+    border-right: 4px solid darkgreen;
+}
+.about-content{
+    text-align: center;
+}
+.about-content h3{
+    font-size: 1.8rem;
+    text-shadow: rgb(48, 71, 2);
+    color: wheat;
+}
+.about-content p{
+    font-size: 17px;
+    margin: 1rem 0 1rem;
+}
+.btn-box.btns{
+    display: inline-block;
+    width: 15rem;
+}
+.btn{
+    font-size: 16px;
+    background-color: rgb(27, 31, 21);
+}
+.btn-box.btns a::before{
+    background: darkolivegreen;
+}
+/* ###########################The EDUCATION SECTION Styling############################# */
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(220, 236, 240);
+    min-height: auto;
+    padding-bottom: 4rem;
+}
+.education-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.education-column{
+    flex: 1 1 30rem;
+}
+.education-column .title{
+    font-size: 1.7rem;
+    margin: 0 0 1.5rem 2rem;
+}
+.education-box{
+    border-left: 2px solid yellowgreen;
+}
+.education-content{
+    position: relative;
+    padding-left: 1.5rem;
+}
+.education-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: yellowgreen;
+    border-radius: 50%;
+}
+.education-content .content{
+    position: relative;
+    padding: 1.2rem;
+    border: 1px dashed rgb(143, 143, 142);
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+.education-content .content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    border-radius: 50px;
+    height: 100%;
+    background: rgb(63, 105, 96);
+    z-index: -1;
+    transition: 2s;
+}
+.education-content .content:hover::before{
+    width: 100%;
+}
+.content .year{
+    font-size: 1rem;
+    color: yellowgreen;
+    padding-bottom: .5rem;
+}
+.content .year i{
+    padding-right: .5rem;
+}
+.content h3{
+    font-size: 1.2rem;
+}
+.content p{
+    font-size: 17px;
+    padding-top: .5rem;
+}
+/* ###################SKILLS SECTION Design##################### */
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: darkgreen;
+}
+.skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    color: rgb(220, 236, 240);
+}
+.skills-column{
+    flex: 1 1 30rem;
+}
+.skills-column .title{
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+}
+.skills-content{
+    position: relative;
+    border: 1px solid rgb(50, 205, 205);
+    border-radius: 10px;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.skills-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    border-radius: 30px;
+    height: 100%;
+    background: rgb(92, 126, 117);
+    z-index: -1;
+    transition: 3s;
+}
+.skills-content:hover::before{
+    width: 100%;
+    opacity: .5%;
+   
+}
+.skills-content .progress{
+    padding: 10px 0;
+}
+.skills-content .progress h3{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.skills-content .progress h3 span{
+    color: rgb(157, 227, 245);
+}
+.skills-content .progress .bar{
+    height: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed rgb(106, 175, 121);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+    display: block;
+    border-radius: 4px;
+    height: 100%;
+    background: yellowgreen;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+    width: 93%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+    width: 69%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+    width: 73%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+    width: 89%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width: 77%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+    width: 75%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+    width: 67%;
+}
+/* ##########################The CONTACT SECTION Design################## */
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.contact form{
+    max-width: 55rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-box .input-field{
+    position: relative;
+    width: 50%;
+    margin: .8rem 0;
+}
+.input-box .input-field input,
+.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    color: rgb(157, 227, 245);
+    background: transparent;
+    border-radius: 8px;
+    border: 1.3px dashed rgba(123, 233, 236, 0.568);
+}
+.input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color: rgb(209, 217, 219);
+}
+.textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.textarea-field textarea{
+    resize: none;
+}
+.btn-box.btns .btn{
+    cursor: pointer;
+}
+.contact form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(105, 219, 189);
+    border-radius: 8px;
+    z-index: -1;
+    transition: 1s;
+}
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+    width: 100%;
+    opacity: 1%;
+}
+/* ##################Footer############################# */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: rgb(25, 36, 33);
+}
+.footer-text p{
+    font-size: .8rem;
+}
+.footer-icon a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: yellowgreen;
+    border: 1px solid darkgreen;
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
+}
+.footer-icon a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(92, 126, 117);
+    z-index: -1;
+    transition: .8s;
+}
+.footer-icon a:hover::before{
+    width: 100%;
+}
+.footer-icon a i{
+    font-size: 1.5rem;
+    color: rgb(157, 227, 245);
+    transition: .5s;
+}
+/* .footer-icon a:hover i{
+    color: rgb(3, 70, 3);
+} */
+
+/* ########################The MEDIA SCREEN SECTION Design ###########################*/
+@media (max-width: 1024px){
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 868px) {
+    .header {
+        padding: 1.7rem 3%;
+    }
+    .section{
+        padding: 8.5rem 3% 1.7rem;
+    }
+    .home{
+        padding: 0 3%;
+    }
+    .home-content p{
+        font-size: 14px;
+    }
+    .topright a{
+        font-size: 13px;
+    }
+    .footer{
+        padding: 1.7rem 3%;
+    }
+    .home-reach{
+        position: absolute;
+        font-size: 20px;
+        bottom: 3rem;
+        width: 450px;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 -40px;
+    }
+    .mainimage img{
+        width: 300px;
+        height: 300px;
+        mix-blend-mode:darken;
+        border-radius: 50%;
+    }
+    .mainimage::before{
+        content: '';
+        position: absolute;
+        top: 15%;
+        /* bottom: 20%; */
+        /* left: 51%; */
+        /* right: 50%; */
+        width: 0;
+        height: 60%;
+        background:url(images/Southy.jpg);
+        border-radius: 50%;
+        transition: 2s;
+    }
+    .mainimage:hover::before{
+        width: 43%;
+    }
+}
+@media (max-width: 640px) {
+    .header{
+        background-image: linear-gradient(to bottom right, gray, yellowgreen,rgb(29, 28, 28),rgb(2, 70, 2));
+    }
+    /* .topright a{
+        font-size: 10px;
+    } */
+    .mobilemenuicon{
+        display: block;
+    }
+    /* .home-content p{
+        font-size: 11px;
+    } */
+     .identity{
+        display: none;
+     }
+     .home-reach{
+        position: absolute;
+        font-size: 17px;
+        bottom: 4rem;
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+     .topmenu{
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background-image: linear-gradient(to bottom left, gray, yellowgreen,rgb(37, 35, 35),rgb(2, 70, 2));
+        box-shadow: 0.5rem 1rem darkgreen;
+        transition: 1s ease;
+     }
+     .topmenu.active{
+        left: 0;
+        transition-delay: 0s;
+        opacity: .8;
+     }
+     .topmenu a{
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+     }
+     .mainimage img{
+        /* display: none; */
+        pointer-events: none;
+        background: yellowgreen;
+        /* opacity: .1; */
+    }
+    .mainimage img{
+        width: 250px;
+        height: 250px;
+        mix-blend-mode:darken;
+        border-radius: 50%;
+    }
+    .mainimage::before{
+        content: '';
+        position: absolute;
+        top: 21%;
+        /* bottom: 20%; */
+        /* right: 51%; */
+        right: 50%;
+        width: 0;
+        height: 50%;
+        background:url(images/Southy.jpg);
+        border-radius: 50%;
+        transition: 2s;
+    }
+    .mainimage:hover::before{
+        width: 48%;
+    }
+   
+}
+
+@media (max-width: 528px) {
+    html{
+        font-size: 45%;
+    }
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        line-height: 1.5;
+    }
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        margin-top: 1.5rem;
+    }
+    .mainimage img{
+        width: 180px;
+        height: 180px;
+        mix-blend-mode:darken;
+        border-radius: 50%;
+    }
+    .mainimage::before{
+        content: '';
+        position: absolute;
+        top: 30%;
+        /* bottom: 60%; */
+        /* right: 51%; */
+        /* right: 50%; */
+        width: 0;
+        height: 38%;
+        background:url(images/Southy.jpg);
+        border-radius: 50%;
+        transition: 2s;
+    }
+    .mainimage:hover::before{
+        width: 48%;
+    }
+    .btn{
+        font-size: 12px;
+    }
+}
